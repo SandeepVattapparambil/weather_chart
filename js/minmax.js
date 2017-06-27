@@ -31,7 +31,6 @@ $(document).ready(function() {
     Chart.defaults.global.defaultFontSize = 14;
 
     var data = {
-      //labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],
       labels: label,
       datasets: [{
           label: "Min",
@@ -51,7 +50,7 @@ $(document).ready(function() {
           pointHoverBorderWidth: 2,
           pointRadius: 4,
           pointHitRadius: 10,
-          data: [12.27, 13.53, 13.77, 13.09, 12.57, 11.48, 14.31],
+          data: data_min,
           spanGaps: false,
         }, {
           label: "Max",
@@ -72,7 +71,7 @@ $(document).ready(function() {
           pointHoverBorderWidth: 2,
           pointRadius: 4,
           pointHitRadius: 10,
-          data: [17.39, 16.53, 17.9, 19.05, 14.48, 18.19, 21.46],
+          data: data_max,
           spanGaps: false,
         }
 
