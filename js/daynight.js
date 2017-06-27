@@ -105,8 +105,8 @@ $(document).ready(function() {
           type: 'line',
           mode: 'horizontal',
           scaleID: 'y-axis-0',
-          value: 12.27,
-          endValue: 15.67,
+          value: data_day[0],
+          endValue: data_night[6],
           borderColor: 'rgb(75, 192, 192)',
           borderWidth: 2,
           label: {
