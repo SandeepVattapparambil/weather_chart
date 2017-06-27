@@ -17,17 +17,22 @@ $.getJSON(url, function(data) {
     var min_temp = list[i].temp.min;
     var max_temp = list[i].temp.max;
     var date = new Date(date_unix_stamp * 1000).getDay();
-    var day = weekdays[date-1];
-    if(date == 0){
+    var day = weekdays[date - 1];
+    if (date == 0) {
       day = 'Sun';
     }
-    console.log(day, min_temp, max_temp);
+    //console.log(day, min_temp, max_temp);
+    item.day = day;
+    item.min_temp = min_temp;
+    item.max_temp = max_temp;
   }
+  console.log(item);
 });
 
 
 var data = {
   labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],
+  //labels: item[day],
   datasets: [{
       label: "Min",
       fill: true,
