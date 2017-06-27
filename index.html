@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Line Chart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="grey lighten-3">
+  <div class="navbar-fixed">
+    <nav class="white">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo pink-text">&nbsp;Weather Forecast</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons pink-text">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="pink-text" href="#modal1">About</a></li>
+        </ul>
+        <ul class="side-nav pink-text" id="mobile-demo">
+          <li><a class="pink-text" href="#modal1">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="row">
+    <div class="col s12 l6">
+      <div class="card white">
+        <div class="card-content pink-text">
+          <span id="mtemp" class="card-title">
+            <div class="chip pink lighten-5 pink-text">London City
+              </div></span>
+              <p class="pink-text text-lighten-3">Min & Max Temperature for the next 7 days</p>
+          <canvas id="minmax"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 l6">
+      <div class="card white">
+        <div class="card-content pink-text">
+          <span id="dtemp" class="card-title"><div class="chip pink lighten-5 pink-text">London City
+          </div></span>
+          <p class="pink-text text-lighten-3"> Day & Night Temperature for the next 7 days</p>
+          <canvas id="daynight"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>About !</h4>
+      <p>A Simple demo of Chart.js library using weather data from openweathermap.org api.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect btn-flat pink-text">Ok</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+  <script src="js/chartjs-annotation.js"></script>
+  <script src="js/minmax.js"></script>
+  <script src="js/daynight.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+      $('.modal').modal();
+    });
+  </script>
+</body>
+
+</html>

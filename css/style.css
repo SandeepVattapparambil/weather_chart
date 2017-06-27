@@ -1,0 +1,16 @@
+canvas {
+  width: 100%;
+}
+
+#mtemp, #dtemp {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sidenav-overlay {
+  z-index: 996;
+}
+
+.chip{
+  font-size: 18px;
+}
