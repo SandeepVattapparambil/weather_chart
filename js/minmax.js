@@ -5,6 +5,27 @@ var ctx = canvas.getContext('2d');
 Chart.defaults.global.defaultFontColor = '#9e9e9e';
 Chart.defaults.global.defaultFontSize = 14;
 
+//Get data from API
+var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=7&appid=b1b15e88fa797225412429c1c50c122a1&apikey=26416597cea257592c8f3895f4cb53ed";
+$.getJSON(url, function(data) {
+  var item = [];
+  var weekdays = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+  var list = data.list;
+  //console.log(list);
+  for (var i in list) {
+    var date_unix_stamp = list[i].dt;
+    var min_temp = list[i].temp.min;
+    var max_temp = list[i].temp.max;
+    var date = new Date(date_unix_stamp * 1000).getDay();
+    var day = weekdays[date-1];
+    if(date == 0){
+      day = 'Sun';
+    }
+    console.log(day, min_temp, max_temp);
+  }
+});
+
+
 var data = {
   labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],
   datasets: [{
