@@ -16,6 +16,7 @@ canvas {
 
 .chip{
   font-size: 18px;
+  font-weight: 300;
 }
 nav .brand-logo{
   font-weight: 200;
