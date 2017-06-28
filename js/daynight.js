@@ -48,7 +48,7 @@ $(document).ready(function() {
     var data = {
       labels: label,
       datasets: [{
-        label: "Morning",
+        label: "Day",
         fill: true,
         backgroundColor: "rgba(248, 186, 207, 0.28)",
         borderWidth: 2,
