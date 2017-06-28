@@ -7,7 +7,6 @@ $(document).ready(function() {
     var data_night = [];
     var weekdays = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
     var list = data.list;
-    //console.log(list);
     for (var i in list) {
       var date_unix_stamp = list[i].dt;
       var day_temp = list[i].temp.day;
@@ -21,7 +20,7 @@ $(document).ready(function() {
       data_day.push(day_temp);
       data_night.push(night_temp);
     }
-
+    var t_line = linear_regression(data_day, data_night);
     var canvas = document.getElementById("daynight");
     var ctx = canvas.getContext('2d');
 
@@ -105,8 +104,8 @@ $(document).ready(function() {
           type: 'line',
           mode: 'horizontal',
           scaleID: 'y-axis-0',
-          value: data_day[0],
-          endValue: data_night[6],
+          value: t_line[0],
+          endValue: t_line[6],
           borderColor: 'rgb(75, 192, 192)',
           borderWidth: 2,
           label: {
