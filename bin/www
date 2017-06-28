@@ -19,10 +19,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app).listen(app.get('port'),
-  function() {
-    console.log("Express server listening on localhost:" + app.get('port'));
-  });
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
