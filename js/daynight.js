@@ -106,7 +106,7 @@ $(document).ready(function() {
           mode: 'horizontal',
           scaleID: 'y-axis-0',
           value: t_line[0],
-          endValue: t_line[6],
+          endValue: t_line[1],
           borderColor: 'rgb(75, 192, 192)',
           borderWidth: 2,
           label: {

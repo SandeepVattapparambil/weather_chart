@@ -109,8 +109,8 @@ $(document).ready(function() {
           type: 'line',
           mode: 'horizontal',
           scaleID: 'y-axis-0',
-          value: trend_line[0], //data_min[0],
-          endValue: trend_line[1], //data_max[6],
+          value: trend_line[0],
+          endValue: trend_line[1], 
           borderColor: 'rgb(75, 192, 192)',
           borderWidth: 2,
           label: {
