@@ -14,7 +14,7 @@ $(document).ready(function() {
       var min_temp = list[i].temp.min;
       var max_temp = list[i].temp.max;
       var date = new Date(date_unix_stamp * 1000).getDay();
-      var day = weekdays[date - 1];
+      var day = weekdays[date];
       if (date == 0) {
         day = 'Sun';
       }
@@ -24,6 +24,7 @@ $(document).ready(function() {
     }
 
     var trend_line = linear_regression(data_min, data_max);
+    console.log(trend_line);
     var canvas = document.getElementById("minmax");
     var ctx = canvas.getContext('2d');
 

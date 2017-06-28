@@ -12,7 +12,7 @@ $(document).ready(function() {
       var day_temp = list[i].temp.day;
       var night_temp = list[i].temp.night;
       var date = new Date(date_unix_stamp * 1000).getDay();
-      var day = weekdays[date - 1];
+      var day = weekdays[date];
       if (date == 0) {
         day = 'Sun';
       }
@@ -21,6 +21,7 @@ $(document).ready(function() {
       data_night.push(night_temp);
     }
     var t_line = linear_regression(data_day, data_night);
+    console.log(t_line);
     var canvas = document.getElementById("daynight");
     var ctx = canvas.getContext('2d');
 
