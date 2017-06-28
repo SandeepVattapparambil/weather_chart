@@ -5,6 +5,7 @@
   <title>Line Chart</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/nprogress.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -39,7 +40,7 @@
       <div class="card white">
         <div class="card-content pink-text">
           <span id="dtemp" class="card-title"><div class="chip pink lighten-5 pink-text">London City
-          </div></span>
+          <i class="material-icons left">location_on</i></div></span>
           <p class="pink-text text-lighten-3"> Day & Night Temperature for the next 7 days</p>
           <canvas id="daynight"></canvas>
         </div>
@@ -52,18 +53,25 @@
     <div class="modal-content">
       <h4>About !</h4>
       <p>A Simple dashboard demo to display weather data of London City.</p>
-      <p>UI Framework : MaterializeCSS<br> API: Openweathermaps<br> Charting library: ChartJS<br>
-        Chart annotations: ChartJS-Annotations Plugin<br>
-        Trendline Calculation: Linear Regression JS plugin<br>
+      <p>UI Framework : MaterializeCSS<br> API: Openweathermaps<br> Charting library: ChartJS<br> Chart annotations: ChartJS-Annotations Plugin<br> Trendline Calculation: Linear Regression JS plugin<br>
       </p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect btn-flat pink-text">Ok</a>
     </div>
   </div>
+  <script src="js/nprogress.js"></script>
+  <script>
+  NProgress.start();
+  window.onload = function(){
+      NProgress.done();
+  };
+  </script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+
   <script src="js/chartjs-annotation.js"></script>
   <script src="js/regression.js"></script>
   <script src="js/function.js"></script>
@@ -71,6 +79,7 @@
   <script src="js/daynight.js"></script>
   <script>
     $(document).ready(function() {
+
       $(".button-collapse").sideNav();
       $('.modal').modal();
     });

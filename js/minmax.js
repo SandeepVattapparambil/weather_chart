@@ -24,7 +24,6 @@ $(document).ready(function() {
     }
 
     var trend_line = linear_regression(data_min, data_max);
-    console.log(trend_line);
     var canvas = document.getElementById("minmax");
     var ctx = canvas.getContext('2d');
 
@@ -110,7 +109,7 @@ $(document).ready(function() {
           mode: 'horizontal',
           scaleID: 'y-axis-0',
           value: trend_line[0],
-          endValue: trend_line[1], 
+          endValue: trend_line[1],
           borderColor: 'rgb(75, 192, 192)',
           borderWidth: 2,
           label: {

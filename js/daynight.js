@@ -21,7 +21,6 @@ $(document).ready(function() {
       data_night.push(night_temp);
     }
     var t_line = linear_regression(data_day, data_night);
-    console.log(t_line);
     var canvas = document.getElementById("daynight");
     var ctx = canvas.getContext('2d');
 
