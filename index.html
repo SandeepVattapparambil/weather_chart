@@ -2,14 +2,19 @@
 <html>
 
 <head>
-  <title>Line Chart</title>
+  <title>Weather App</title>
+  <!--MaterializeCSS stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <!--Google Material Design Iconset -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--NProgress page loader CSS -->
   <link href="css/nprogress.css" rel="stylesheet">
+  <!--Custom styles -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="grey lighten-3">
+  <!--Navbar static -->
   <div class="navbar-fixed">
     <nav class="white">
       <div class="nav-wrapper">
@@ -24,24 +29,29 @@
       </div>
     </nav>
   </div>
+  <!--Main grid row -->
   <div class="row">
     <div class="col s12 l6">
+      <!--card 1-->
       <div class="card white">
         <div class="card-content pink-text">
           <span id="mtemp" class="card-title">
             <div class="chip pink lighten-5 pink-text">London City<i class="material-icons left">location_on</i>
               </div></span>
           <p class="pink-text text-lighten-3">Min & Max Temperature for the next 7 days</p>
+          <!--canvas to draw chart 1-->
           <canvas id="minmax"></canvas>
         </div>
       </div>
     </div>
     <div class="col s12 l6">
+      <!--card 2-->
       <div class="card white">
         <div class="card-content pink-text">
           <span id="dtemp" class="card-title"><div class="chip pink lighten-5 pink-text">London City
           <i class="material-icons left">location_on</i></div></span>
           <p class="pink-text text-lighten-3"> Day & Night Temperature for the next 7 days</p>
+          <!--canvas to draw chart 2-->
           <canvas id="daynight"></canvas>
         </div>
       </div>
@@ -53,40 +63,45 @@
     <div class="modal-content">
       <h4>About !</h4>
       <p>A Simple dashboard demo to display weather data of London City.</p>
-      <p>UI Framework : MaterializeCSS<br>
-        API: Openweathermaps<br>
-        Charting library: ChartJS<br>
-        Chart annotations: ChartJS-Annotations Plugin<br>
-        Trendline Calculation: Linear Regression JS plugin<br>
-        Server: NodeJS http + filed
+      <p>UI Framework : MaterializeCSS<br> API: Openweathermaps<br> Charting library: ChartJS<br> Chart annotations: ChartJS-Annotations Plugin<br> Trendline Calculation: Linear Regression JS plugin<br> Server: NodeJS http + filed
       </p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect btn-flat pink-text">Ok</a>
     </div>
   </div>
+
+  <!-- JS Files -->
+  <!--NProgress library -->
   <script src="js/nprogress.js"></script>
+  <!--NProgress init -->
   <script>
-  NProgress.start();
-  window.onload = function(){
-      NProgress.done();
-  };
+    NProgress.start(); //start on page load
+    window.onload = function() {
+      NProgress.done(); //stop on loaded state
+    };
   </script>
+  <!--jQquery cdn -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
+  <!--Materialize library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.js"></script>
+  <!--ChartJS library-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
-
+  <!--ChartJS Annotations plugin -->
   <script src="js/chartjs-annotation.js"></script>
+  <!--Regression analysis plugin -->
   <script src="js/regression.js"></script>
+  <!--custom function to do regression -->
   <script src="js/function.js"></script>
+  <!--temp min-max -->
   <script src="js/minmax.js"></script>
+  <!--temp day-night -->
   <script src="js/daynight.js"></script>
+  <!--Materialize init -->
   <script>
     $(document).ready(function() {
-
-      $(".button-collapse").sideNav();
-      $('.modal').modal();
+      $(".button-collapse").sideNav(); //sidenav init
+      $('.modal').modal(); //modal init
     });
   </script>
 </body>
