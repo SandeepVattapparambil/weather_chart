@@ -1,13 +1,16 @@
-var http = require('http');
+var http = require('http'),
+  filed = require('filed');
 
-var finalhandler = require('finalhandler');
-var serveStatic = require('serve-static');
-
-var serve = serveStatic("./");
-
-var server = http.createServer(function(req, res) {
-  var done = finalhandler(req, res);
-  serve(req, res, done);
+server = http.createServer(function(req, resp) {
+  if (req.url === "/") {
+    req.pipe(filed('./public/index.html')).pipe(resp);
+  } else {
+    req.pipe(filed("./public" + req.url)).pipe(resp);
+  }
 });
 
-server.listen(8000);
+var port = process.argv[2] || 8080
+
+server.listen(port, function() {
+  console.log("Server started on " + port);
+});

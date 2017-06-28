@@ -4,7 +4,7 @@
   "description": "chart test",
   "main": "index.js",
   "scripts": {
-    "start":"index.js",
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,10 +13,8 @@
   "author": "Sandeep",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.6.0"
+    "chart.js": "^2.6.0",
+    "filed": "^0.1.0"
   },
-  "devDependencies": {
-    "finalhandler": "^1.0.3",
-    "serve-static": "^1.12.3"
-  }
+  "devDependencies": {}
 }
