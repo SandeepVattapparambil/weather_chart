@@ -13,7 +13,6 @@
   "author": "Sandeep",
   "license": "ISC",
   "dependencies": {
-    "filed": "^0.1.0"
   },
   "devDependencies": {}
 }
