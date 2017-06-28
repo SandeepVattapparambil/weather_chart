@@ -13,7 +13,6 @@
   "author": "Sandeep",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.6.0",
     "filed": "^0.1.0"
   },
   "devDependencies": {}
