@@ -36,6 +36,7 @@ $(document).ready(function() {
     }
     //generate trendline coordinates
     var t_line = linear_regression(data_day, data_night);
+    //console.log(t_line);
     //get canvas element
     var canvas = document.getElementById("daynight");
     //set 2d chart
@@ -49,7 +50,7 @@ $(document).ready(function() {
       labels: label,
       datasets: [{
         label: "Day",
-        fill: true,
+        fill: false,
         backgroundColor: "rgba(248, 186, 207, 0.28)",
         borderWidth: 2,
         borderColor: "#e91e63", //The main line color
@@ -69,7 +70,7 @@ $(document).ready(function() {
         spanGaps: false,
       }, {
         label: "Night",
-        fill: true,
+        fill: false,
         backgroundColor: "rgba(226, 192, 232, 0.39)",
         borderWidth: 2,
         borderColor: "#ab47bc",

@@ -36,6 +36,7 @@ $(document).ready(function() {
     }
     //generate trendline coordinates
     var trend_line = linear_regression(data_min, data_max);
+    //console.log(trend_line);
     //get canvas element
     var canvas = document.getElementById("minmax");
     //set 2d chart
@@ -49,7 +50,7 @@ $(document).ready(function() {
       labels: label,
       datasets: [{
           label: "Min",
-          fill: true,
+          fill: false,
           backgroundColor: "rgba(248, 186, 207, 0.28)",
           borderWidth: 2,
           borderColor: "#e91e63", //The main line color
@@ -69,7 +70,7 @@ $(document).ready(function() {
           spanGaps: false,
         }, {
           label: "Max",
-          fill: true,
+          fill: false,
           lineTension: 0,
           backgroundColor: "rgba(243, 229, 245, 0.47)",
           borderWidth: 2,
